@@ -4,13 +4,12 @@ parts:
   - caption: "Лекция №1"
     chapters:
       - file: lectures/1/about_cpp
-      - file: lectures/1/installing_cpp
+      - file: docs/how_to_install_cpp
+        sections:
+          - file: docs/installing_vs_code
       - file: lectures/1/getting_started
         sections:
           - file: lectures/1/OOP_for_what
 
       - file: lectures/1/complex_numbers
       - file: lectures/1/homework
-
-
-      
