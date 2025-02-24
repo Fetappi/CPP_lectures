@@ -3,3 +3,4 @@
 .vscode
 *venv/
 _bibliography
+*.exe
