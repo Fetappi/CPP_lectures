@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/my_css_rules.css?v=564be945" />
@@ -406,7 +406,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">Устанвливаем редактор VS code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mingw-w64">Установка набора инструментов MinGW-w64</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-path">Добаление пути в переменную среды Windows PATH.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-path">Добаление пути в переменную среды Windows PATH</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Проверяем Hello World</a></li>
 </ul>
             </nav>
@@ -424,14 +424,13 @@ document.write(`
 <p>Все написанное далее взято и переведено с официального <a class="reference external" href="https://code.visualstudio.com/docs/cpp/config-mingw">сайта</a> Vs Code. Я распишу основную часть.</p>
 <section id="vs-code">
 <h2>Устанвливаем редактор VS code<a class="headerlink" href="#vs-code" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Заходим на официальный сайт <a class="reference external" href="https://code.visualstudio.com/download">VS Code</a> и скачиваем последнию версию установщика. Инструкция внутри:</p></li>
-</ol>
+<ol class="arabic">
+<li><p>Заходим на официальный сайт <a class="reference external" href="https://code.visualstudio.com/download">VS Code</a> и скачиваем последнию версию установщика. Инструкция внутри:</p>
 <div class="toggle docutils container">
 <p><img alt="" src="../_images/setup-1.png" /></p>
 <p><img alt="" src="../_images/setup-2.png" /></p>
 </div>
-<ol class="arabic" start="2">
+</li>
 <li><p>На всякий случай перезагружаемся</p></li>
 <li><p>Открываем vs code, переходим во вкладку Extensions</p>
 <figure class="align-default">
@@ -450,15 +449,13 @@ document.write(`
 </section>
 <section id="mingw-w64">
 <h2>Установка набора инструментов MinGW-w64<a class="headerlink" href="#mingw-w64" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Загружаем последнюю версию программы установки по этой прямой <a class="reference external" href="https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe">ссылкой на программу установки</a>.</p></li>
-</ol>
+<ol class="arabic">
+<li><p>Загружаем последнюю версию программы установки по этой прямой <a class="reference external" href="https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe">ссылкой на программу установки</a>.</p>
 <figure class="align-default">
 <img alt="../_images/MSYS2_Setup.gif" src="../_images/MSYS2_Setup.gif" />
 </figure>
-<ol class="arabic simple" start="2">
-<li><p>Оставляем флаг на открытие MSYS2 Setup. Должен открыться терминал, внутрь терминала необходимо добавить следующию команду, а затем нажать <code class="docutils literal notranslate"><span class="pre">Enter</span></code>:</p></li>
-</ol>
+</li>
+<li><p>Оставляем флаг на открытие MSYS2 Setup. Должен открыться терминал, внутрь терминала необходимо добавить следующию команду, а затем нажать <code class="docutils literal notranslate"><span class="pre">Enter</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain</span>
 </pre></div>
 </div>
@@ -472,7 +469,7 @@ document.write(`
 </ol>
 <p>Текст из буфера обмена будет добавлен в терминал.</p>
 </div>
-<ol class="arabic simple" start="3">
+</li>
 <li><p>Должен появиться список пакетов, жмем <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Затем пишем <code class="docutils literal notranslate"><span class="pre">Y</span></code>, жмем <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Начнется установка, после оканачния пишем в терминал <code class="docutils literal notranslate"><span class="pre">exit</span></code>, жмем <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p></li>
 </ol>
 <figure class="align-default">
@@ -480,9 +477,9 @@ document.write(`
 </figure>
 </section>
 <section id="windows-path">
-<h2>Добаление пути в переменную среды Windows PATH.<a class="headerlink" href="#windows-path" title="Link to this heading">#</a></h2>
+<h2>Добаление пути в переменную среды Windows PATH<a class="headerlink" href="#windows-path" title="Link to this heading">#</a></h2>
 <p>Чтобы ваш компьютер мог находить и запускать программы из папки MinGW-w64/bin, нужно добавить путь к этой папке в переменную среды PATH в Windows. Это позволит операционной системе легко находить нужные файлы. Я опишу самый простой способ. Он проверен на Windows 11. Если у вас более старая версия ОС и что-то идет не так на каком-то шаге, пожалуйста, сообщите мне.</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Необходимо запустить окно Свойства системы. Сделать это можно нескольками способами:</p>
 <ul class="simple">
 <li><p>Нажмите одновременно клавиши Win (обычно это значок с логотипом Windows) и R на клавиатуре.</p></li>
@@ -490,12 +487,11 @@ document.write(`
 </ul>
 </li>
 <li><p>Введите внутрь следующию команду: <code class="docutils literal notranslate"><span class="pre">sysdm.cpl</span></code>. Должено открыться окно <em>Свойства системы</em>. Вверху переходим в пункт <em>Дополнительно</em>, внизу находим клавишу <em>Переменные среды…</em></p></li>
-<li><p>В вверхей части находим строку <code class="docutils literal notranslate"><span class="pre">Path</span></code>. Кликаем на нее два раза. Нажимаем на кнопку <code class="docutils literal notranslate"><span class="pre">Создать</span></code>. И вставляем адрес <code class="docutils literal notranslate"><span class="pre">C:\msys64\ucrt64\bin</span></code>, при условии что мы не меняли путь установки MSYS2. Далее нажимаем несколько раз <code class="docutils literal notranslate"><span class="pre">ОК</span></code>.</p></li>
-</ol>
+<li><p>В вверхей части находим строку <code class="docutils literal notranslate"><span class="pre">Path</span></code>. Кликаем на нее два раза. Нажимаем на кнопку <code class="docutils literal notranslate"><span class="pre">Создать</span></code>. И вставляем адрес <code class="docutils literal notranslate"><span class="pre">C:\msys64\ucrt64\bin</span></code>, при условии что мы не меняли путь установки MSYS2. Далее нажимаем несколько раз <code class="docutils literal notranslate"><span class="pre">ОК</span></code>.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/Path_setup.mp4"><video src="../_images/Path_setup.mp4" title="../_images/Path_setup.mp4" width="100%"><a href="../_images/Path_setup.mp4">../_images/Path_setup.mp4</a></video></a>
 </figure>
-<ol class="arabic simple" start="4">
+</li>
 <li><p>Проверка установки. Жмем комбинацию клавищ <code class="docutils literal notranslate"><span class="pre">Win+R</span></code>, вводим <code class="docutils literal notranslate"><span class="pre">cmd</span></code>, <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. На экране должен появится терминал. Пишем команду <code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">--version</span></code>, <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Вы должны увидеть выходные данные, в которых указано, какиую версию GCC вы установили. Если это не так, то сочувствую. На самом деле, в таком случае советую перейти на <a class="reference external" href="https://code.visualstudio.com/docs/cpp/config-mingw#_check-your-mingw-installation">официальную страницу</a> и изучить этот вопрос там.</p></li>
 </ol>
 <figure class="align-default">
@@ -505,37 +501,33 @@ document.write(`
 <section id="hello-world">
 <h2>Проверяем Hello World<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
 <p>Документация на <a class="reference external" href="https://code.visualstudio.com/docs/cpp/config-mingw#_add-a-hello-world-source-code-file">официальном сайте</a> достаточно хорошо написана. Я не буду повторять всё, что там сказано. Но я добавлю видео и текст, который вы сможете скопировать и использовать.</p>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../_images/Hello_world.mp4"><video src="../_images/Hello_world.mp4" title="../_images/Hello_world.mp4" width="100%"><a href="../_images/Hello_world.mp4">../_images/Hello_world.mp4</a></video></a>
-</figure>
+<iframe width="720" height="405" src="https://rutube.ru/play/embed/559fa7ef853b05720a0fbb83f644e98a/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <p>Команды используемые в видео</p>
-<ol class="arabic simple">
-<li></li>
-</ol>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<ol class="arabic">
+<li><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="w">     </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<span class="w">     </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
 
-<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<span class="w">     </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C++&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;from&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;VS Code&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;and the C++ extension!&quot;</span><span class="p">};</span>
+<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C++&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;from&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;VS Code&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;and the C++ extension!&quot;</span><span class="p">};</span>
 
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">         </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="w">         </span><span class="p">{</span>
+<span class="w">             </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">         </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">     </span><span class="p">}</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Code</span> <span class="n">runner</span> <span class="n">Run</span> <span class="n">In</span> <span class="n">Terminal</span>
+</li>
+<li><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>     Code runner Run In Terminal
 </pre></div>
 </div>
+</li>
+</ol>
 </section>
 </section>
 
@@ -605,7 +597,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">Устанвливаем редактор VS code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mingw-w64">Установка набора инструментов MinGW-w64</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-path">Добаление пути в переменную среды Windows PATH.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-path">Добаление пути в переменную среды Windows PATH</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Проверяем Hello World</a></li>
 </ul>
   </nav></div>
