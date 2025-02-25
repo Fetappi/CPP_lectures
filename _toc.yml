@@ -13,3 +13,10 @@ parts:
 
       - file: lectures/1/complex_numbers
       - file: lectures/1/homework
+
+  - caption: "Лекция №2"
+    chapters:
+      - file: lectures/2/useful
+      - file: lectures/2/links
+      - file: lectures/2/overloading
+      - file: lectures/2/homework
