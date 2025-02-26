@@ -23,3 +23,4 @@ email: **<shishkin.ap17@physics.msu.ru>**
 2. [Учебно-методическое пособие](https://cmp.phys.msu.su/study/programming/cpp-book)
 3. [Язык программирования С/С++: часто встречающиеся ошибки при написании программ](https://cmp.phys.msu.su/sites/default/files/Часто%20встречающиеся%20ошибки.pdf)
 4. [Теоретический минимум знаний по языку программирования Си++](https://cmp.phys.msu.su/study/programming/cpp-minimum)
+5. [Программы по курсы](https://drive.google.com/open?id=1sOb6fJA52r7vYHCDok9w_lCXTKmP1-ei&usp=drive_fs)

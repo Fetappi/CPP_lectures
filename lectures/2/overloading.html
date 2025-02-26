@@ -142,7 +142,7 @@
 
   
 
-<a class="navbar-brand logo" href="../main.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -174,7 +174,7 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../main.html">
+                <a class="reference internal" href="../index.html">
                     Язык программирования Си++
                 </a>
             </li>
@@ -447,6 +447,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перегрузка оператора присваивания <code class="docutils literal notranslate"><span class="pre">+=</span></code> :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Вспомогательные методы и перегрузка оператора <code class="docutils literal notranslate"><span class="pre">+</span></code> :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> :</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> :</a></li>
 </ul>
             </nav>
         </div>
@@ -563,13 +564,35 @@ document.write(`
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">ostream</span></code> — это класс в языке C++, который представляет потоки вывода. Он позволяет отправлять данные на устройства вывода, такие как консоль или файлы.</p>
-<p>Объект типа <code class="docutils literal notranslate"><span class="pre">ostream</span></code> получает значения различных типов, преобразует их в последовательность символов и передаёт через буфер в определённое место для вывода.</p>
-<p>Тут и раскрывается смысл константных методов. Как уже было сказано, константные ссылки были введены в параметры функции, дабы ограничить непреднамеренное изменение передаваемого объекта. Но эта защита, так же ограничивает нас в использовании методов класса. Т.е. если мы константные методы <code class="docutils literal notranslate"><span class="pre">chislitel()</span></code> и <code class="docutils literal notranslate"><span class="pre">znamenatel()</span></code>  превратим в обычные, то при вызове:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ratio</span><span class="w"> </span><span class="n">r1</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span>
+<p>Объект типа <code class="docutils literal notranslate"><span class="pre">ostream</span></code> получает значения различных типов, преобразует их в последовательность символов и передаёт через буфер в определённое место для вывода. Теперь мы легко можем использовать обычный нам способ вывода в консоль:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Ratio</span><span class="w"> </span><span class="nf">r1</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">r1</span><span class="p">;</span><span class="w"> </span>
 </pre></div>
 </div>
-<p>у нас выведется ошибка.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Константные ссылки позволяют нам убедиться, что передаваемый по ссылке объект не будет изменен. Но за это мы платим тем, что не можем вызывать никакие методы этих объектов. Т.е. в нашем случае при перегрузке оператора мы вызываем методы для доступа к числителю и знаменателю. Эти методы вызываются к объекту переданный по константной ссылке. И дабы вызвать этим методы нам приходится отдельно указать, что эти методы являются константными, т.е.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>int chislitel() const { return a; }
+int znamenatel() const { return b; }
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h2>Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> :<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">is</span><span class="p">,</span><span class="w"> </span><span class="n">Ratio</span><span class="o">&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">na</span><span class="p">,</span><span class="w"> </span><span class="n">nb</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">is</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">na</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">is</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="sc">&#39;/&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">nb</span><span class="p">;</span>
+<span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ratio</span><span class="p">(</span><span class="n">na</span><span class="p">,</span><span class="n">nb</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">is</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">istream</span></code> - это базовый класс в C++ для работы с потоками ввода данных. Он определен в стандартной библиотеке в заголовочном файле <code class="docutils literal notranslate"><span class="pre">iostream</span></code> и предназначен для чтения данных из различных источников (консоль, файлы, сетевые интерфейсы и т.д.).</p>
 </section>
 </section>
 
@@ -642,6 +665,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перегрузка оператора присваивания <code class="docutils literal notranslate"><span class="pre">+=</span></code> :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Вспомогательные методы и перегрузка оператора <code class="docutils literal notranslate"><span class="pre">+</span></code> :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> :</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> :</a></li>
 </ul>
   </nav></div>
 

@@ -3,6 +3,7 @@
 ```c++
 #include<stdio.h>
 #include<math.h>
+#include <iostream>
 using namespace std;
 
 class complex
@@ -26,7 +27,8 @@ class complex
         }
         complex(double qq)
         {
-            real = qq;     imag = 0;
+            real = qq;     
+            imag = 0;
         }
     //member functions==methods
 
@@ -36,7 +38,7 @@ class complex
             return res;
         }
 
-        void rotete90(){
+        void rotate90(){
             double temp= real;
     
             real = imag;
@@ -48,13 +50,14 @@ class complex
         {
             printf("z=%.0lf+i*%.0lf\n", real, imag);
         }
-                // функции доступа
-        double re() 
+        
+        // функции доступа
+        double& re() 
         { 
             return real; 
         }
         double im() { return imag; }
-};    //  end of class complex
+};      //  end of class complex
 
 
 int main()
@@ -69,7 +72,7 @@ int main()
 
     // printf("z=%.0lf+i*%.0lf\n", z0.real, z0.imag);
     // z0.show();
-    // z0.rotete90();
+    // z0.rotate90();
     // z0.show();
     // printf("res=%.0lf\n", z0.modul());
     // z0.show();
