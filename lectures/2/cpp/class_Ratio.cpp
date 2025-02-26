@@ -75,7 +75,7 @@ int main( )
 {
     Ratio r1(5, 2), r2, r3(3, 4);
     cout << r1 << endl << r2 << endl << r3 << endl << endl;
-    r3 = r2 = r1;
+    // r3 = r2 = r1;
     cout << r1 << endl << r2 << endl << r3 << endl << endl;
 
     cout << &r1 << endl << &r2 << endl << &r3 << endl << endl;  
