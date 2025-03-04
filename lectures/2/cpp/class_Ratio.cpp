@@ -53,6 +53,7 @@ class Ratio
             res += src2;
             return res;
         }
+
 };
 
 ostream& operator<<(ostream& os, const Ratio& src)
@@ -62,10 +63,14 @@ ostream& operator<<(ostream& os, const Ratio& src)
         return os;
     }
 
-istream& operator>>(istream& is,Ratio& r)
+istream& operator>>(istream& is, Ratio& r)
 {
-    int na, nb=1; is >> na;
-    char c; is >> c;
+    int na, nb=1; 
+    is >> na;
+
+    char c; 
+    is >> c;
+
     if (c=='/') is >> nb;
     r = Ratio(na,nb);
     return is;
@@ -73,12 +78,19 @@ istream& operator>>(istream& is,Ratio& r)
 
 int main( )
 {
-    Ratio r1(5, 2), r2, r3(3, 4);
-    cout << r1 << endl << r2 << endl << r3 << endl << endl;
-    // r3 = r2 = r1;
-    cout << r1 << endl << r2 << endl << r3 << endl << endl;
+    // Ratio r = 1;  //explicit
+    // cout << r<< endl;
+    Ratio new_R = (Ratio) 5;
+    cout << new_R << endl;
+    // r += 3;
+    // double d = 5;
+    // double d = double (5);
 
-    cout << &r1 << endl << &r2 << endl << &r3 << endl << endl;  
+    // // overload =
+    // Ratio r1(5, 2), r2, r3(3, 4);
+    // cout << r1 << endl << r2 << endl << r3 << endl << endl;
+    // r3 = r2 = r1;
+    // cout << r1 << endl << r2 << endl << r3 << endl << endl;
 
     // Ratio r1(1,2), r2(1,3), r3;
     // r1 += 3;
@@ -87,21 +99,28 @@ int main( )
 
     // Ratio r1, r2, r3;
     // char op;
-    // cout<<"enter r1"<<endl;
+
+    // cout<<"enter r1:";
     // cin>>r1;
-    // cout<<"enter op"<<endl;
+    // cout << endl;
+
+    // cout<<"enter op:";
     // cin>>op;
-    // cout<<"enter r2"<<endl;
+    // cout << endl;
+
+    // cout<<"enter r2:";
     // cin>>r2;
+    // cout << endl;
+
     // switch (op)
     // {
-    //     case '+': { r3=r1+r2; break; }
-    //     // case '-': r3=r1-r2; break; /* этот и последующие арифметические */
-    //     // case '*': r3=r1*r2; break; /* операторы нужно реализовать */
-    //     // case '/': r3=r1/r2; break; /* в классе Ratio по образцу operator+ */
-    //     // default:
-    //     // cout<<"Error!"<<flush;
-    //     // // return ;
+    //     case '+': { r3 = r1 + r2; break;}
+    //     // case '-': { r3 = r1-r2; break;} /* этот и последующие арифметические */
+    //     // case '*': { r3 = r1*r2; break;} /* операторы нужно реализовать */
+    //     // case '/': { r3 = r1/r2; break;} /* в классе Ratio по образцу operator+ */
+    //     default:
+    //         cout << "Error!" << flush;
+    //         // return ;
     // }
     // cout<<r1<<' '<<op<<' '<<r2<<" = "<<r3<<endl;
 

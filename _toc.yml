@@ -20,3 +20,9 @@ parts:
       - file: lectures/2/links
       - file: lectures/2/overloading
       - file: lectures/2/homework
+
+  - caption: "Лекция №3"
+    chapters:
+      - file: lectures/3/intro
+      # - file: lectures/3/inheritance2
+      - file: lectures/3/homework
