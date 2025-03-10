@@ -33,7 +33,7 @@ sphinx:
     
 # Launch button settings
 repository:
-  url: https://github.com/FadeevLecturer/python_lectures
+  url: https://github.com/Fetappi/CPP_lectures
   branch: main 
 launch_buttons:
   colab_url: "https://colab.research.google.com"

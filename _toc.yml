@@ -26,3 +26,9 @@ parts:
       - file: lectures/3/intro
       # - file: lectures/3/inheritance2
       - file: lectures/3/homework
+
+  - caption: "Лекция №4"
+    chapters:
+      - file: lectures/4/intro
+      # - file: lectures/3/inheritance2
+      - file: lectures/4/homework
