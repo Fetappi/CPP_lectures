@@ -8,11 +8,11 @@ class pointN // класс точки в N-мерном пространстве
     double *x;
     friend class vectorN; // объявление дружественного класса
 public:
-    pointN(int n, double d);
+    pointN(int n, double d); //объявление конструктора, реализация которого ниже
     ~pointN() {delete [] x;}
 };
 
-pointN::pointN(int n, double d) 
+pointN::pointN(int n, double d) // реализация конструктора
 {
     point_size = n;
     x = new double[point_size];
@@ -35,14 +35,15 @@ public:
         vector_size = beg.point_size;
         xv = new double[vector_size];   
         for (int i = 0; i < vector_size; i++)
-            xv[i] = end.x[i] - beg.x[i];
+            xv[i] = end.x[i] - beg.x[i]; //координаты вектора
     }
     ~vectorN() {delete [] xv;}
 
-    double norm();
+    double norm(); // объявление метода класса
 };
 
-double vectorN::norm()
+double vectorN::norm() // реализация метода класса
+// метод класса, который вычисляет норму вектора
 {
     double sum = 0;
     for (int i = 0; i < vector_size; i++)

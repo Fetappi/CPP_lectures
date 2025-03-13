@@ -7,9 +7,9 @@ class point2
     float x, y;
 public:
     point2(float xi, float yi): x(xi), y(yi)
-        {}
-    void display();
-    friend float dist(point2, line2);
+        { }
+    void display(); // объявление метода класса
+    friend float dist(point2, line2); // объявление дружественной функции
 };
 
 // :: оператор разрешения области видимости
@@ -28,10 +28,11 @@ public:
     {
         cout << "a = " << a << " b = " << b << " c = " << c << endl;
     }
-    friend float dist(point2, line2);
+    friend float dist(point2, line2); // объявление дружественной функции
 };
 
-float dist(point2 p, line2 l)
+float dist(point2 p, line2 l) // реализация дружественной функции
+// функция, которая вычисляет расстояние от точки до прямой
 {
     return l.a * p.x + l.b * p.y + l.c;
 }

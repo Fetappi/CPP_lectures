@@ -8,6 +8,7 @@ class point_name
     char cc{'c'};   // инициализация только при создании объекта класса
                     // здесь же происходит их объявление, шаблон
     friend void change_name(point_name *, char); //неважно где объявлено, прототип
+    friend void change_name(point_name &, char); 
 public:
     point_name(int xi, int yi, char ci): x(xi), y(yi), cc(ci) // список инициализации
         {}
@@ -17,9 +18,16 @@ public:
     }
 };
 
-void change_name(point_name *p, char c)
+void change_name(point_name * p, char c)
 {
     p->cc = c;// аналогично (*p).cc = c;
+    // p.cc = c;
+}
+
+void change_name(point_name & p, char c)
+{
+    // p->cc = c;// аналогично (*p).cc = c;
+    p.cc = c;
 }
 
 int main()
@@ -32,7 +40,7 @@ int main()
     S.display(); getch();
     change_name(&D, '*'); // изменение значения поля cc объекта D
     D.display(); getch();
-    change_name(&S, '#'); // изменение значения поля cc объекта S
+    change_name(S, '#'); // изменение значения поля cc объекта S
     S.display(); getch();
     return 0;
 

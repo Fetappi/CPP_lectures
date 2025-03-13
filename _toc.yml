@@ -24,11 +24,14 @@ parts:
   - caption: "Лекция №3"
     chapters:
       - file: lectures/3/intro
-      # - file: lectures/3/inheritance2
       - file: lectures/3/homework
 
   - caption: "Лекция №4"
     chapters:
       - file: lectures/4/intro
-      # - file: lectures/3/inheritance2
       - file: lectures/4/homework
+
+  - caption: "Лекция №5"
+    chapters:
+      - file: lectures/5/intro
+      - file: lectures/5/homework
