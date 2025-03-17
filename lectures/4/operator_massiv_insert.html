@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Что было на лекции &#8212; Практикум по компьютерным технологиям</title>
+    <title>Перегрузка оператора обращения к элементу массиву [] и метод insert &#8212; Практикум по компьютерным технологиям</title>
   
   
   
@@ -58,13 +58,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/4/intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/4/operator_massiv_insert';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Массивы и указатели" href="massive.html" />
-    <link rel="prev" title="Дополнение к домашней работе №2" href="../3/homework.html" />
+    <link rel="next" title="Домашняя работа №3" href="homework.html" />
+    <link rel="prev" title="Операция new как способ выделения динамической памяти" href="new_delete.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,10 +207,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №4</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Что было на лекции</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Что было на лекции</a></li>
 <li class="toctree-l1"><a class="reference internal" href="massive.html">Массивы и указатели</a></li>
 <li class="toctree-l1"><a class="reference internal" href="new_delete.html">Операция new как способ выделения динамической памяти</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operator_massiv_insert.html">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="homework.html">Домашняя работа №3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №5</span></p>
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="https://github.com/Fetappi/CPP_lectures/edit/main/lectures/4/intro.md" target="_blank"
+      <li><a href="https://github.com/Fetappi/CPP_lectures/edit/main/lectures/4/operator_massiv_insert.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -305,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Fetappi/CPP_lectures/issues/new?title=Issue%20on%20page%20%2Flectures/4/intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Fetappi/CPP_lectures/issues/new?title=Issue%20on%20page%20%2Flectures/4/operator_massiv_insert.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="../../_sources/lectures/4/intro.md" target="_blank"
+      <li><a href="../../_sources/lectures/4/operator_massiv_insert.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +406,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -417,11 +419,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Что было на лекции</h1>
+    <h1>Перегрузка оператора обращения к элементу массиву [] и метод insert</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#over-massiv">Оператор <code class="docutils literal notranslate"><span class="pre">[]</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-insert">Метод insert</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -431,17 +442,89 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Что было на лекции<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://drive.google.com/open?id=13dTHiiZy9Gs7dosF-s2HOadJXHCG4Sp_&amp;amp;usp=drive_fs">Программы на лекции</a></p>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="massive.html#massiv-and-points"><span class="std std-ref">Массивы и указатели</span></a></p></li>
-<li><p><a class="reference internal" href="new_delete.html#oper-new"><span class="std std-ref">Оператор <code class="docutils literal notranslate"><span class="pre">new</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="new_delete.html#oper-delete"><span class="std std-ref">Оператор <code class="docutils literal notranslate"><span class="pre">delete</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="operator_massiv_insert.html#over-massiv"><span class="std std-ref">Перегрузка оператора <code class="docutils literal notranslate"><span class="pre">[]</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="operator_massiv_insert.html#method-insert"><span class="std std-ref">Метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></span></a></p></li>
-<li><p><a class="reference internal" href="homework.html#home-work-3"><span class="std std-ref">Домашняя работа</span></a></p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="insert">
+<h1>Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code><a class="headerlink" href="#insert" title="Link to this heading">#</a></h1>
+<p>В данном разделе предлагается самостоятельное изучения класса динамического массива <code class="docutils literal notranslate"><span class="pre">massiv_point</span></code> элементов класса <code class="docutils literal notranslate"><span class="pre">CPoint</span></code> из файла <em>Cpoint.cpp</em> в <a class="reference external" href="https://drive.google.com/open?id=13dTHiiZy9Gs7dosF-s2HOadJXHCG4Sp_&amp;amp;usp=drive_fs">данной директории</a>. Здесь же будет краткие пояснения.</p>
+<section id="over-massiv">
+<span id="id1"></span><h2>Оператор <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#over-massiv" title="Link to this heading">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">massiv_point</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">        </span><span class="c1">// перегрузка оператора [] для доступа к элементам массива по индексу</span>
+<span class="w">        </span><span class="n">CPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error !&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">                </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">pPoint</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// реализация константного оператора []</span>
+<span class="w">        </span><span class="n">CPoint</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span>
+<span class="w">                </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">pPoint</span><span class="p">[</span><span class="n">index</span><span class="p">];</span><span class="w"> </span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Объявление оператора как <code class="docutils literal notranslate"><span class="pre">CPoint</span> <span class="pre">&amp;</span> <span class="pre">operator</span> <span class="pre">[]</span> <span class="pre">(int</span> <span class="pre">index)</span></code> — универсальное определение, иногда его называют левая перегрузка оператора квадратные скобочки. Название <em>левое</em> связано с тем, что данное определение возвращает ссылку на элемент, по которому можно будет изменить сам элемент, <strong>тем самым использовать оператор <code class="docutils literal notranslate"><span class="pre">[]</span></code> слева от знака <code class="docutils literal notranslate"><span class="pre">=</span></code></strong>.</p>
+<p>Но прочитать логично можно будет и с данным определением, за исключением случая когда объект класса передается как константная ссылка, тогда вызова данного оператора будет невозможным. В таком случае сработает константное определение: <code class="docutils literal notranslate"><span class="pre">CPoint</span> <span class="pre">operator</span> <span class="pre">[]</span> <span class="pre">(int</span> <span class="pre">index)</span> <span class="pre">const</span></code>, так называемое правое определение оператора <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">get_y</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">massiv_point</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">y</span><span class="p">;</span><span class="w">  </span><span class="c1">// вызов константного оператора []</span>
+<span class="w">                        </span><span class="c1">// Это пример, когда необходимо использовать константный оператор []</span>
+<span class="w">                        </span><span class="c1">// Так называемый правый оператор []</span>
+<span class="w">                        </span><span class="c1">// так как объект p является константным</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="method-insert">
+<span id="id2"></span><h2>Метод insert<a class="headerlink" href="#method-insert" title="Link to this heading">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">massiv_point</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="p">...</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">CPoint</span><span class="w"> </span><span class="n">point</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span><span class="w">   </span>
+<span class="w">            </span><span class="n">CPoint</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CPoint</span><span class="w"> </span><span class="p">[</span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// создаем новый массив на 1 элемент больше</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">         </span><span class="c1">// копируем все элементы до индекса</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pPoint</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">temp</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">point</span><span class="p">;</span><span class="w">    </span><span class="c1">// вставляем новый элемент</span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">  </span><span class="c1">// копируем все элементы после индекса</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pPoint</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">size</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">delete</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">pPoint</span><span class="p">;</span><span class="w">   </span><span class="c1">// удаляем старый массив</span>
+<span class="w">            </span><span class="n">pPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">      </span><span class="c1">// присваиваем указателю pPoint адрес нового массива</span>
+<span class="w">                                </span><span class="c1">// delete [] temp; не нужно, так как pPoint теперь указывает на temp</span>
+<span class="w">                                </span><span class="c1">// а переменная temp уничтожится сама при выходе из функции</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -475,20 +558,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../3/homework.html"
+       href="new_delete.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Дополнение к домашней работе №2</p>
+        <p class="prev-next-title">Операция new как способ выделения динамической памяти</p>
       </div>
     </a>
     <a class="right-next"
-       href="massive.html"
+       href="homework.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Массивы и указатели</p>
+        <p class="prev-next-title">Домашняя работа №3</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -499,7 +582,21 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#over-massiv">Оператор <code class="docutils literal notranslate"><span class="pre">[]</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-insert">Метод insert</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

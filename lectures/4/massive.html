@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Домашняя работа №2 &#8212; Практикум по компьютерным технологиям</title>
+    <title>Массивы и указатели &#8212; Практикум по компьютерным технологиям</title>
   
   
   
@@ -58,13 +58,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/2/homework';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/4/massive';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Что было на лекции?" href="../3/intro.html" />
-    <link rel="prev" title="Перегрузка операторов в C++" href="overloading.html" />
+    <link rel="next" title="Операция new как способ выделения динамической памяти" href="new_delete.html" />
+    <link rel="prev" title="Что было на лекции" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,11 +194,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../1/homework.html">Домашняя работа №1</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №2</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="useful.html">Полезные изменения в Си++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="links.html">Ссылки. Константные ссылки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overloading.html">Перегрузка операторов в <code class="docutils literal notranslate"><span class="pre">C++</span></code></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Домашняя работа №2</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2/useful.html">Полезные изменения в Си++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2/links.html">Ссылки. Константные ссылки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2/overloading.html">Перегрузка операторов в <code class="docutils literal notranslate"><span class="pre">C++</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2/homework.html">Домашняя работа №2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №3</span></p>
 <ul class="nav bd-sidenav">
@@ -206,12 +206,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../3/homework.html">Дополнение к домашней работе №2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №4</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../4/intro.html">Что было на лекции</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4/massive.html">Массивы и указатели</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4/new_delete.html">Операция new как способ выделения динамической памяти</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4/operator_massiv_insert.html">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4/homework.html">Домашняя работа №3</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Что было на лекции</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Массивы и указатели</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_delete.html">Операция new как способ выделения динамической памяти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operator_massiv_insert.html">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="homework.html">Домашняя работа №3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №5</span></p>
 <ul class="nav bd-sidenav">
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="https://github.com/Fetappi/CPP_lectures/edit/main/lectures/2/homework.md" target="_blank"
+      <li><a href="https://github.com/Fetappi/CPP_lectures/edit/main/lectures/4/massive.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -305,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Fetappi/CPP_lectures/issues/new?title=Issue%20on%20page%20%2Flectures/2/homework.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Fetappi/CPP_lectures/issues/new?title=Issue%20on%20page%20%2Flectures/4/massive.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="../../_sources/lectures/2/homework.md" target="_blank"
+      <li><a href="../../_sources/lectures/4/massive.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -419,7 +419,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Домашняя работа №2</h1>
+    <h1>Массивы и указатели</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -429,7 +429,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Возможные вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#massiv-and-points">Напоминание из СИ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Нововведение в СИ++ оператор <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -441,27 +442,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="o2">
-<h1>Домашняя работа №2<a class="headerlink" href="#o2" title="Link to this heading">#</a></h1>
-<p id="hm2">Все <a class="reference external" href="https://drive.google.com/open?id=1sOb6fJA52r7vYHCDok9w_lCXTKmP1-ei&amp;amp;usp=drive_fs">программы по курсы</a></p>
-<p>Взять из лекции 1 пример класса комплексных чисел и переписать его используя полезные нововведения из текущей лекции, а именно:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cin</span></code> и <code class="docutils literal notranslate"><span class="pre">cout</span></code></p></li>
-<li><p>Используя какой либо текст, следует использовать класс <code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
-<li><p>Так где можно используйте константные ссылки.</p></li>
-<li><p>Перегрузить операции <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
-<li><p>Перегрузить операторы <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> и <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>.</p></li>
-</ol>
-<section id="id1">
-<h2>Возможные вопросы<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Чем структуры отличаются от классов?</p></li>
-<li><p>Когда стоит использовать константные ссылки?</p></li>
-<li><p>Перечислить основные новшества в языке Си++?</p></li>
-<li><p>Что такое объект класса? Экземпляр класса?</p></li>
-<li><p>Для чего в перегрузке оператора <code class="docutils literal notranslate"><span class="pre">=</span></code> мы возвращаем объект класса? Будет ли работать перегрузка с типом <code class="docutils literal notranslate"><span class="pre">void</span></code>, если да то как?</p></li>
-<li><p>На примере конструктора копирования опишите целесообразность использования ссылок в параметрах функции.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Массивы и указатели<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="massiv-and-points">
+<span id="id2"></span><h2>Напоминание из СИ<a class="headerlink" href="#massiv-and-points" title="Link to this heading">#</a></h2>
+<p>В текущем занятии используется класс <code class="docutils literal notranslate"><span class="pre">CPoint</span></code>:</p>
+<div class="toggle docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class CPoint 
+{ // описание класса “точка”
+    public:
+        int x, y; // координаты точки
+
+        CPoint( int newX=0, int newY=0 ) // конструктор
+        { 
+            Set(newX,newY); 
+        } 
+
+        ~CPoint() // деструктор
+        { 
+            cout &lt;&lt; &quot;Я уничтожил: &quot; &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y &lt;&lt; endl; 
+        } 
+
+        void Set( int newX=0, int newY=0 ) // установка значений
+        { 
+            x=newX, y=newY; 
+        } 
+
+        void Set_from_console() // установка значений
+        { 
+            cout &lt;&lt; &quot;Enter x: &quot;;
+            cin &gt;&gt; x;
+            cout &lt;&lt; endl &lt;&lt; &quot;Enter y: &quot;;
+            cin &gt;&gt; y;
+            cout &lt;&lt; endl;
+        } 
+};
+</pre></div>
+</div>
+</div>
+<p>Объявление статического массива:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//&lt;тип данных&gt; &lt;название переменной для массива&gt;[&lt;константное целое число&gt;]</span>
+<span class="c1">// Пример:</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="o">=</span><span class="mi">12</span><span class="p">;</span><span class="w">     </span>
+<span class="w">    </span><span class="n">CPoint</span><span class="w"> </span><span class="n">PtArray</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Стоит хорошо запомнить: Имя переменной для массива — является указателем на первый элемент массива.</p>
+</div>
+<p>Напоминаю объявление указателя:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;тип данных&gt; * &lt;название переменной для указателя&gt;</span>
+<span class="c1">// Пример:</span>
+<span class="w">    </span><span class="n">CPoint</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pPoint</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Теперь у нас есть два указателя на тип данных <code class="docutils literal notranslate"><span class="pre">CPoint</span></code>. Но пока что <code class="docutils literal notranslate"><span class="pre">pPoint</span></code> не указывает ни на что, он только объявлен. Чтобы инициализировать его надо написать следующее:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">pPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PtArray</span><span class="p">;</span><span class="w">       </span><span class="c1">// pPoint указывает на первый элемент массива</span>
+<span class="w">    </span><span class="n">pPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PtArray</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w">   </span><span class="c1">// pPoint указывает на пятый элемент массива</span>
+<span class="w">    </span><span class="n">pPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PtArray</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">  </span><span class="c1">// pPoint указывает на десятый элемент массива</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Операция:
+<code class="docutils literal notranslate"><span class="pre">PtArray[5]</span></code> — аналогична операции: <code class="docutils literal notranslate"><span class="pre">*(PtArray</span> <span class="pre">+</span> <span class="pre">5)</span></code></p>
+</div>
+</section>
+<section id="id3">
+<h2>Нововведение в СИ++ оператор <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Если указатель указывает на класс или структуру, то по нему можно получить поля(атрибуты) или выполнить вызов метода обычным способом:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pPoint</span><span class="p">).</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// при условии что x --- в публичной части класса</span>
+<span class="w">    </span><span class="p">(</span><span class="o">*</span><span class="n">pPoint</span><span class="p">).</span><span class="n">Set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>В Си++ введен оператор обращения к классу <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>. Действие этого оператора полностью аналогично операциям выше, но выглядит более изящно:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pPoint</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// при условии что x --- в публичной части класса</span>
+<span class="w">    </span><span class="n">pPoint</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -478,7 +537,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./lectures\2"
+            path: "./lectures\4"
         },
         predefinedOutput: true
     }
@@ -496,20 +555,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="overloading.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Перегрузка операторов в <code class="docutils literal notranslate"><span class="pre">C++</span></code></p>
+        <p class="prev-next-title">Что было на лекции</p>
       </div>
     </a>
     <a class="right-next"
-       href="../3/intro.html"
+       href="new_delete.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Что было на лекции?</p>
+        <p class="prev-next-title">Операция new как способ выделения динамической памяти</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -529,7 +588,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Возможные вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#massiv-and-points">Напоминание из СИ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Нововведение в СИ++ оператор <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></a></li>
 </ul>
   </nav></div>
 

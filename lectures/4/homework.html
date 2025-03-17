@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Что было на лекции" href="../5/intro.html" />
-    <link rel="prev" title="Что было на лекции" href="intro.html" />
+    <link rel="prev" title="Перегрузка оператора обращения к элементу массиву [] и метод insert" href="operator_massiv_insert.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -203,11 +203,14 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №3</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../3/intro.html">Что было на лекции?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3/homework.html">Домашняя работа №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3/homework.html">Дополнение к домашней работе №2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №4</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Что было на лекции</a></li>
+<li class="toctree-l1"><a class="reference internal" href="massive.html">Массивы и указатели</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_delete.html">Операция new как способ выделения динамической памяти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operator_massiv_insert.html">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Домашняя работа №3</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Лекция №5</span></p>
@@ -427,6 +430,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Обязательные вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Таблица</a></li>
 </ul>
             </nav>
         </div>
@@ -440,7 +444,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="o3">
 <h1>Домашняя работа №3<a class="headerlink" href="#o3" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://drive.google.com/open?id=13dTHiiZy9Gs7dosF-s2HOadJXHCG4Sp_&amp;amp;usp=drive_fs">Программы на лекции</a></p>
+<p id="home-work-3"><a class="reference external" href="https://drive.google.com/open?id=13dTHiiZy9Gs7dosF-s2HOadJXHCG4Sp_&amp;amp;usp=drive_fs">Программы на лекции</a></p>
 <p>Реализовать класс – динамический массив объектов с возможностью добавления(метод insert) и удаления(метод erase). Должны быть реализованы:</p>
 <ol class="arabic simple">
 <li><p>Конструкторы и деструктор</p></li>
@@ -450,6 +454,18 @@ document.write(`
 <li><p>Для упрощения проверки, прошу заготовить заранее <strong>тестовый массив с 10 заданными элементами</strong></p></li>
 <li><p>Объекты динамического массива и методы, необходимые для реализации взять из таблицы ниже</p></li>
 </ol>
+<section id="id1">
+<h2>Обязательные вопросы<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Явное приведение типов</p></li>
+<li><p>Как выделять динамическую память? Синтаксис? Что возвращает оператор <code class="docutils literal notranslate"><span class="pre">new</span></code>?</p></li>
+<li><p>Синтаксис оператора <code class="docutils literal notranslate"><span class="pre">delete</span></code>?</p></li>
+<li><p>Как работает оператор <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>с указателем? Как работает оператор <code class="docutils literal notranslate"><span class="pre">+</span></code> с указателем на массив?</p></li>
+<li><p>Описать общий алгоритм для метода insert?</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>Таблица<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Пояснения к таблице:</p>
 <ul class="simple">
 <li><p><strong>два индекса между ними</strong> — Функция erase – принимает два индекса i и j, между которыми нужно удалить элементы</p></li>
@@ -626,15 +642,6 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<section id="id1">
-<h2>Обязательные вопросы<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Явное приведение типов</p></li>
-<li><p>Как выделять динамическую память? Синтаксис? Что возвращает оператор <code class="docutils literal notranslate"><span class="pre">new</span></code>?</p></li>
-<li><p>Синтаксис оператора <code class="docutils literal notranslate"><span class="pre">delete</span></code>?</p></li>
-<li><p>Как работает оператор <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>с указателем? Как работает оператор <code class="docutils literal notranslate"><span class="pre">+</span></code> с указателем на массив?</p></li>
-<li><p>Описать общий алгоритм для метода insert?</p></li>
-</ol>
 </section>
 </section>
 
@@ -669,12 +676,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="operator_massiv_insert.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Что было на лекции</p>
+        <p class="prev-next-title">Перегрузка оператора обращения к элементу массиву <code class="docutils literal notranslate"><span class="pre">[]</span></code> и метод <code class="docutils literal notranslate"><span class="pre">insert</span></code></p>
       </div>
     </a>
     <a class="right-next"
@@ -703,6 +710,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Обязательные вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Таблица</a></li>
 </ul>
   </nav></div>
 
