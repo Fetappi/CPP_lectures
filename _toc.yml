@@ -29,6 +29,9 @@ parts:
   - caption: "Лекция №4"
     chapters:
       - file: lectures/4/intro
+      - file: lectures/4/massive
+      - file: lectures/4/new_delete
+      - file: lectures/4/operator_massiv_insert
       - file: lectures/4/homework
 
   - caption: "Лекция №5"
