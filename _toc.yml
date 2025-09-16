@@ -1,40 +1,61 @@
 format: jb-book
 root: lectures/index
 parts:
-  - caption: "Лекция №1"
+  - caption: "Лекция C_1"
     chapters:
-      - file: lectures/1/about_cpp
-      - file: docs/how_to_install_cpp
-        sections:
-          - file: docs/installing_vs_code
-      - file: lectures/1/getting_started
-        sections:
-          - file: lectures/1/OOP_for_what
+      - file: lectures/C_1/prog_1
+      - file: lectures/C_1/prog_2
 
-      - file: lectures/1/complex_numbers
-      - file: lectures/1/homework
+  # - caption: "Лекция №1"
+  #   chapters:
+  #     - file: lectures/1/about_cpp
+  #     - file: docs/how_to_install_cpp
+  #       sections:
+  #         - file: docs/installing_vs_code
+  #     - file: lectures/1/getting_started
+  #       sections:
+  #         - file: lectures/1/OOP_for_what
 
-  - caption: "Лекция №2"
-    chapters:
-      - file: lectures/2/useful
-      - file: lectures/2/links
-      - file: lectures/2/overloading
-      - file: lectures/2/homework
+  #     - file: lectures/1/complex_numbers
+  #     - file: lectures/1/homework
 
-  - caption: "Лекция №3"
-    chapters:
-      - file: lectures/3/intro
-      - file: lectures/3/homework
+  # - caption: "Лекция №2"
+  #   chapters:
+  #     - file: lectures/2/useful
+  #     - file: lectures/2/links
+  #     - file: lectures/2/overloading
+  #     - file: lectures/2/homework
 
-  - caption: "Лекция №4"
-    chapters:
-      - file: lectures/4/intro
-      - file: lectures/4/massive
-      - file: lectures/4/new_delete
-      - file: lectures/4/operator_massiv_insert
-      - file: lectures/4/homework
+  # - caption: "Лекция №3"
+  #   chapters:
+  #     - file: lectures/3/intro
+  #     - file: lectures/3/homework
 
-  - caption: "Лекция №5"
-    chapters:
-      - file: lectures/5/intro
-      - file: lectures/5/homework
+  # - caption: "Лекция №4"
+  #   chapters:
+  #     - file: lectures/4/intro
+  #     - file: lectures/4/massive
+  #     - file: lectures/4/new_delete
+  #     - file: lectures/4/operator_massiv_insert
+  #     - file: lectures/4/homework
+
+  # - caption: "Лекция №5"
+  #   chapters:
+  #     - file: lectures/5/intro
+  #     - file: lectures/5/homework
+
+  # - caption: "Лекция №6, 7"
+  #   chapters:
+  #     - file: lectures/7/intro
+  #     - file: lectures/7/homework
+
+  # - caption: "Лекция №8"
+  #   chapters:
+  #     - file: lectures/8/intro
+  #     - file: lectures/8/homework
+
+  # - caption: "Тест по STL и Шаблонам"
+  #   chapters:
+  #     - file: lectures/11/intro
+  #     - file: lectures/11/homework
+

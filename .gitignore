@@ -1,5 +1,6 @@
 *_build
 */_build
+*hw
 .vscode
 *venv/
 _bibliography
