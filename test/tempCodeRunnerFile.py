@@ -1,7 +1,4 @@
-import os
-from moviepy.video.io.VideoFileClip import VideoFileClip
-
-# # Define the path to the directory containing the MP4 files
+aining the MP4 files
 # directory_path = r"G:\Мой диск\Личное\Угадай опенинг\Невероятное"
 
 # # Iterate over all files in the directory

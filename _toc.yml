@@ -6,6 +6,21 @@ parts:
       - file: lectures/C_1/prog_1
       - file: lectures/C_1/prog_2
 
+  - caption: "Лекция C_2"
+    chapters:
+      - file: lectures/C_2/prog
+
+  - caption: "Лекция C_3"
+    chapters:
+      - file: lectures/C_3/prog
+      - file: lectures/C_3/hw
+
+  - caption: "Лекция C_4"
+    chapters:
+      - file: lectures/C_4/prog
+      - file: lectures/C_4/hw
+
+
   # - caption: "Лекция №1"
   #   chapters:
   #     - file: lectures/1/about_cpp
